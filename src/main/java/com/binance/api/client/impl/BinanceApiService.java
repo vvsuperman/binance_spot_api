@@ -161,10 +161,17 @@ public interface BinanceApiService {
     @DELETE("/api/v1/userDataStream")
     Call<Void> closeAliveUserDataStream(@Query("listenKey") String listenKey);
 
+
+
     // Margin Account endpoints
     @Headers({BinanceApiConstants.ENDPOINT_SECURITY_TYPE_APIKEY_HEADER, BinanceApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER})
-    @POST("/sapi/v1/margin/transfer")
+    @POST("/sapi/v1/asset/transfer")
     Call<MarginTransaction> transfer(@Query("asset") String asset, @Query("amount") String amount, @Query("type") String type, @Query("recvWindow") Long recvWindow, @Query("timestamp") Long timestamp);
+
+
+//    @Headers({BinanceApiConstants.ENDPOINT_SECURITY_TYPE_APIKEY_HEADER, BinanceApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER})
+//    @POST("/sapi/v1/margin/transfer")
+//    Call<MarginTransaction> transfer(@Query("asset") String asset, @Query("amount") String amount, @Query("type") String type, @Query("recvWindow") Long recvWindow, @Query("timestamp") Long timestamp);
 
     @Headers({BinanceApiConstants.ENDPOINT_SECURITY_TYPE_APIKEY_HEADER, BinanceApiConstants.ENDPOINT_SECURITY_TYPE_SIGNED_HEADER})
     @POST("/sapi/v1/margin/loan")

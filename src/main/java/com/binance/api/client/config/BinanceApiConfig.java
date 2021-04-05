@@ -8,8 +8,8 @@ public class BinanceApiConfig {
 	/**
 	 * Base domain for URLs.
 	 */
-//	private static String BASE_DOMAIN = "binance.com";
-    private static String BASE_DOMAIN = "testnet.binance.vision";
+	private static String BASE_DOMAIN = "binance.com";
+//    private static String BASE_DOMAIN = "testnet.binance.vision";
 
 	/**
 	 * Set the URL base domain name (e.g., binance.com).
@@ -32,26 +32,26 @@ public class BinanceApiConfig {
 	/** prd
 	 * REST API base URL.
 	 */
-//	public static String getApiBaseUrl() {
-//		return String.format("https://api.%s", getBaseDomain());
-//	}
+	public static String getApiBaseUrl() {
+		return String.format("https://api.%s", getBaseDomain());
+	}
 
     //test
-    	public static String getApiBaseUrl() {
-		return String.format("https://%s", getBaseDomain());
-	}
+//    	public static String getApiBaseUrl() {
+//		return String.format("https://%s", getBaseDomain());
+//	}
 
 	/** prd
 	 * Streaming API base URL.
 	 */
-//	public static String getStreamApiBaseUrl() {
-//		return String.format("wss://stream.%s:9443/ws", getBaseDomain());
-//	}
+	public static String getStreamApiBaseUrl() {
+		return String.format("wss://stream.%s:9443/ws", getBaseDomain());
+	}
 
     // test
-    public static String getStreamApiBaseUrl(){
-        return "wss://testnet.binance.vision/ws";
-    }
+//    public static String getStreamApiBaseUrl(){
+//        return "wss://testnet.binance.vision/ws";
+//    }
 
 	/**
 	 * Asset info base URL.

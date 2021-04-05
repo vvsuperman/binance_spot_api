@@ -7,7 +7,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public enum TransferType {
-  SPOT_TO_MARGIN("1"), MARGIN_TO_SPOT("2");
+  SPOT_TO_MARGIN("1"), MARGIN_TO_SPOT("2"),MAIN_UMFUTURE("MAIN_UMFUTURE"),UMFUTURE_MAIN("UMFUTURE_MAIN");
+
 
   private String value;
 
